@@ -101,8 +101,14 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.href}
                 onClick={(e) => {
-                  if (location.pathname !== '/') e.preventDefault();
-                  handleNavClick(link.href, true);
+                  e.preventDefault();
+                  setIsOpen(false);
+                  if (location.pathname === '/') {
+                    const id = link.href.replace('/#', '');
+                    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    handleNavClick(link.href, true);
+                  }
                 }}
                 className="text-2xl font-bold hover:text-brand-orange"
               >
