@@ -11,19 +11,19 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 
 const HomePage: React.FC = () => (
-  <main className="space-y-24 pb-20">
+  <main className="space-y-16 md:space-y-24 pb-12 md:pb-20">
     <Hero />
     <section id="about">
-        <About />
+      <About />
     </section>
     <section id="skills">
-        <Skills />
+      <Skills />
     </section>
     <section id="projects">
-        <Projects />
+      <Projects />
     </section>
     <section id="contact">
-        <Contact />
+      <Contact />
     </section>
   </main>
 );
@@ -37,9 +37,9 @@ const BlogPage: React.FC = () => (
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-brand-black text-zinc-100 flex flex-col">
+      <div className="min-h-screen bg-brand-black text-zinc-100 flex flex-col overflow-x-hidden">
         <Navbar />
-        <div className="flex-grow max-w-6xl mx-auto px-4 w-full">
+        <div className="flex-grow max-w-6xl mx-auto px-3 sm:px-4 w-full">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/blog" element={<BlogPage />} />

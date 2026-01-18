@@ -4,7 +4,7 @@ import { SKILL_GROUPS } from '../constants';
 
 const Skills: React.FC = () => {
   return (
-    <div className="space-y-12">
+    <div className="space-y-8 md:space-y-12">
       <div className="text-center space-y-2">
         <h2 className="text-3xl font-bold">Technical Arsenal</h2>
         <p className="text-zinc-500">Tools and technologies I use to bring ideas to life</p>
@@ -12,7 +12,7 @@ const Skills: React.FC = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
         {SKILL_GROUPS.map((group) => (
-          <div key={group.category} className="bg-brand-zinc border border-brand-gray p-6 rounded-2xl hover:border-brand-orange/50 transition-colors group">
+          <div key={group.category} className="bg-brand-zinc border border-brand-gray p-4 sm:p-6 rounded-2xl hover:border-brand-orange/50 transition-colors group">
             <h3 className="text-brand-orange font-bold text-lg mb-4 flex items-center gap-2">
               <span className="w-1 h-1 bg-brand-orange rounded-full"></span>
               {group.category}

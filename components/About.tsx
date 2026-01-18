@@ -3,10 +3,10 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      <div className="relative group">
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div className="relative group overflow-hidden rounded-2xl">
         <div className="absolute -inset-1 bg-gradient-to-r from-brand-orange to-amber-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-        <div className="relative bg-brand-zinc p-8 rounded-2xl border border-brand-gray overflow-hidden">
+        <div className="relative bg-brand-zinc p-4 sm:p-6 md:p-8 rounded-2xl border border-brand-gray overflow-hidden">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-12 rounded-full bg-brand-orange/20 flex items-center justify-center text-brand-orange">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -16,7 +16,7 @@ const About: React.FC = () => {
             <h3 className="text-xl font-bold">Academic Core</h3>
           </div>
           <p className="text-zinc-400 leading-relaxed mb-4">
-            Currently in my <span className="text-zinc-100 font-medium">Final Year of B.Tech CSE</span>. 
+            Currently in my <span className="text-zinc-100 font-medium">Final Year of B.Tech CSE</span>.
             My education hasn't just been about clearing exams—it's been about understanding the "why" behind every line of code.
           </p>
           <div className="space-y-2 font-mono text-sm text-zinc-500">
@@ -45,7 +45,7 @@ const About: React.FC = () => {
           My growth as a developer is fueled by consistent learning. From starting with simple HTML templates to now building distributed systems for my final year projects, the journey has been about embracing errors as lessons.
         </p>
         <div className="flex gap-4 items-center p-4 bg-brand-zinc/50 border border-brand-gray rounded-xl italic text-zinc-500 text-sm">
-           "I don't just build features; I build experiences that solve real-world friction."
+          "I don't just build features; I build experiences that solve real-world friction."
         </div>
       </div>
     </div>
