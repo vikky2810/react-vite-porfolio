@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
             )
           ))}
           <a
-            href="https://docs.google.com/document/d/1example-resume-link/edit"
+            href="/Vikram Kamble Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-1.5 rounded-full border border-brand-orange text-brand-orange text-sm font-semibold hover:bg-brand-orange hover:text-black transition-all"
@@ -126,7 +126,8 @@ const Navbar: React.FC = () => {
             )
           ))}
           <a
-            href="#"
+            href="/Vikram Kamble Resume.pdf"
+            download="Vikram_Kamble_Resume.pdf"
             className="mt-4 w-full py-4 text-center rounded-xl bg-brand-orange text-black font-bold"
           >
             Download Resume
