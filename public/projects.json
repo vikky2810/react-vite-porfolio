@@ -1,0 +1,56 @@
+[
+  {
+    "id": "proj-01",
+    "name": "Health-Aware Recipe Modifier",
+    "description": "A full-stack web application that helps users modify recipes based on medical conditions by detecting harmful ingredients, suggesting healthy alternatives, and generating personalized recipes using AI.",
+    "techStack": [
+      "Python",
+      "Flask",
+      "MongoDB",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Google Gemini API",
+      "ReportLab"
+    ],
+    "lessons": "Built rule-based ingredient analysis combined with AI generation; gained experience with Flask authentication, MongoDB data modeling, PDF report generation, and health-focused data validation.",
+    "githubLink": "https://github.com/vikky2810/Recipe-Modifier",
+    "liveLink": "https://recipe-modifier-app.vercel.app",
+    "image": "/images/project1.png"
+  },
+  {
+    "id": "proj-02",
+    "name": "AI Explains This Repo",
+    "description": "A developer tool that analyzes public GitHub repositories and explains code quality, security issues, performance bottlenecks, and architecture decisions in plain English using AI.",
+    "techStack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "NextAuth",
+      "Google Gemini API"
+    ],
+    "lessons": "Designed AI-powered repository analysis workflows; handled GitHub API limitations, authentication flows, structured AI explanations, and scalable Next.js App Router architecture.",
+    "githubLink": "https://github.com/vikky2810/ai-explains-repo",
+    "liveLink": "https://ai-explains-repo.vercel.app",
+    "image": "/images/project2.png"
+  },
+  {
+    "id": "proj-03",
+    "name": "VArch (DSL to Diagrams)",
+    "description": "A browser-based tool that converts a minimal domain-specific language into clean software architecture diagrams, enabling diagram-as-code without drag-and-drop editors.",
+    "techStack": [
+      "TypeScript",
+      "React",
+      "Vite",
+      "CSS",
+      "SVG Rendering"
+    ],
+    "lessons": "Learned to design and parse a custom DSL, convert text into graph structures, and render architecture diagrams dynamically with a clean, developer-friendly UX.",
+    "githubLink": "https://github.com/vikky2810/dsl-to-diagrams",
+    "liveLink": "https://dsl-to-diagrams.vercel.app",
+    "image": "/images/project3.png"
+  }
+]

@@ -7,6 +7,7 @@ export interface Project {
   lessons: string;
   githubLink: string;
   liveLink?: string;
+  image?: string;
   isFyp?: boolean;
 }
 

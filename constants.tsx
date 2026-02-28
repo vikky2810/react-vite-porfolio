@@ -1,35 +1,5 @@
 
-import React from 'react';
-import { Project, SkillGroup, BlogPost } from './types';
-
-export const PROJECTS: Project[] = [
-  {
-    id: 'fyp-01',
-    name: 'Distributed Task Orchestrator',
-    description: 'A cloud-native orchestration tool designed to manage microservices execution across multiple nodes. It handles failure recovery and load balancing autonomously.',
-    techStack: ['Node.js', 'Redis', 'Docker', 'Next.js'],
-    lessons: 'Architected a custom scheduling algorithm; learned deep concurrency patterns and state synchronization across distributed instances.',
-    githubLink: 'https://github.com/vikky2810/distributed-orchestrator',
-    isFyp: true
-  },
-  {
-    id: 'proj-02',
-    name: 'DevSync: Collaborative Editor',
-    description: 'Real-time collaborative code editor supporting multiple users with syntax highlighting and integrated chat features.',
-    techStack: ['Angular', 'WebSockets', 'Tailwind CSS', 'Firebase'],
-    lessons: 'Optimized WebSocket payload delivery to reduce latency; implemented operational transformation for consistent document state.',
-    githubLink: 'https://github.com/vikky2810/devsync',
-    liveLink: 'https://devsync-demo.vercel.app'
-  },
-  {
-    id: 'proj-03',
-    name: 'AgriSense IoT Dashboard',
-    description: 'Full-stack monitoring solution for agricultural IoT sensors, visualizing humidity, temperature, and soil pH data in real-time.',
-    techStack: ['React', 'D3.js', 'Express', 'PostgreSQL'],
-    lessons: 'Built complex data visualizations with D3; managed high-frequency data ingestion from simulated IoT gateways.',
-    githubLink: 'https://github.com/vikky2810/agrisense'
-  }
-];
+import { SkillGroup, BlogPost } from './types';
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {

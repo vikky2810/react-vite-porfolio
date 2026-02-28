@@ -1,8 +1,37 @@
 
-import React from 'react';
-import { PROJECTS } from '../constants';
+import React, { useState, useEffect } from 'react';
+import { Project } from '../types';
 
 const Projects: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  const apiBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+
+  useEffect(() => {
+    const fetchUrl = `${apiBaseUrl}projects.json`;
+
+    fetch(fetchUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error('Failed to load projects:', err);
+        setLoading(false);
+      });
+  }, [apiBaseUrl]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center py-20">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-brand-orange"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-8 md:space-y-12">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -24,7 +53,7 @@ const Projects: React.FC = () => {
       </div>
 
       <div className="grid gap-6 md:gap-8">
-        {PROJECTS.map((project) => (
+        {projects.map((project) => (
           <div
             key={project.id}
             className={`group relative grid md:grid-cols-5 gap-6 md:gap-8 bg-brand-zinc p-4 sm:p-6 md:p-10 rounded-3xl border border-brand-gray hover:border-brand-orange/30 transition-all ${project.isFyp ? 'ring-2 ring-brand-orange/20' : ''}`}
@@ -62,7 +91,15 @@ const Projects: React.FC = () => {
             <div className="md:col-span-2 flex flex-col justify-center gap-4">
               <div className="aspect-video bg-black rounded-xl border border-brand-gray flex items-center justify-center group-hover:scale-[1.02] transition-transform overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent"></div>
-                <div className="font-mono text-zinc-700 text-xs">Project Preview Container</div>
+                {project.image ? (
+                  <img
+                    src={`${apiBaseUrl}${project.image.startsWith('/') ? project.image.slice(1) : project.image}`}
+                    alt={project.name}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="font-mono text-zinc-700 text-xs">Project Preview Container</div>
+                )}
               </div>
 
               <div className="flex gap-3">
